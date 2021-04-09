@@ -1,0 +1,21 @@
+<div class="form-group">
+	<label for="title">Title</label>
+	<input  required type="text" name="title" id="title" class="form-control" value=<%= article.title %> >
+	<!--If the article failed to submit, then we pass in article object to the new form page, thus if the
+	article object was passed to it then only we display the value as article.title or article.description
+	or article.markdown-->
+</div>
+
+<div class="form-group">
+	<label for="description">Description</label>
+	<textarea required name="description" class="form-control"><%= article.description %></textarea>
+</div>
+
+<div class="form-group">
+	<label for="markdown">Markdown</label>
+	<textarea required name="markdown" id="markdown" class="form-control mb-4"><%= article.markdown %></textarea>
+</div>
+
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>
