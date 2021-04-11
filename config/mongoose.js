@@ -1,10 +1,9 @@
 //require the library
 const mongoose = require("mongoose");
 
-//Connect to the DB
-// mongoose.connect('mongodb://localhost/blog');
+const uri = process.env.ATLAS_URI;
 
-mongoose.connect("mongodb://localhost:27017/blog", {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
