@@ -4,10 +4,7 @@ const mongoose = require("mongoose");
 //Connect to the DB
 // mongoose.connect('mongodb://localhost/blog');
 
-const uri =
-  "mongodb+srv://NotesUser:Notes123@cluster0.9ogkm.mongodb.net/blogDB?retryWrites=true&w=majority";
-
-mongoose.connect(uri, {
+mongoose.connect("mongodb://localhost:27017/blog", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
